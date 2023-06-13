@@ -85,7 +85,7 @@ const Marketing = () => {
                     </div>
                     <div className="flex items-center flex-grow pl-4">
                       <h2 className="mb-1 text-sm font-medium tracking-wider text-gray-900 title-font dark:text-white">
-                        Company Profile
+                        Marketing research
                       </h2>
                     </div>
                   </div>
@@ -98,7 +98,7 @@ const Marketing = () => {
                     </div>
                     <div className="flex items-center flex-grow pl-4">
                       <h2 className="mb-1 text-sm font-medium tracking-wider text-gray-900 title-font dark:text-white">
-                        Marketing platform
+                        Content plan
                       </h2>
                     </div>
                   </div>
@@ -108,7 +108,7 @@ const Marketing = () => {
                     </div>
                     <div className="flex items-center flex-grow pl-4">
                       <h2 className="mb-1 text-sm font-medium tracking-wider text-gray-900 title-font dark:text-white">
-                        Digital marketing plan
+                        Social media marketing
                       </h2>
                     </div>
                   </div>
