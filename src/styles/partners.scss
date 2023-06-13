@@ -1,0 +1,31 @@
+//start global varibales
+$main-color: #0f75bd;
+$secondary-color: #ffcc00;
+//end global varibales
+.partners {
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "PARTNERS";
+    position: absolute;
+    bottom: -50%;
+    left: -2%;
+    font-family: "Technor", sans-serif;
+    font-size: 16rem;
+    color: rgba(255, 204, 0, 0.5);
+    letter-spacing: 40px;
+    font-weight: bold;
+    z-index: -1;
+    @media screen and (max-width: 768px) {
+      top: -8%;
+      font-size: 5rem;
+      letter-spacing: -1px;
+    }
+  }
+  .partners-content {
+    background-color: $secondary-color;
+    border: 3px solid $main-color;
+    padding: 3rem 1rem;
+    border-radius: 10px;
+  }
+}

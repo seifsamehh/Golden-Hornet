@@ -1,0 +1,68 @@
+//start global varibales
+$main-color: #0f75bd;
+$light: #f5f9fa;
+//end global varibales
+.services-header {
+  background-color: rgba(15, 117, 189, 0.6);
+  color: #fff;
+  backdrop-filter: blur(15px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  @media screen and (max-width: 768px) {
+    position: sticky;
+  }
+  a:not(.special) {
+    text-align: center;
+    font-family: "Technor", sans-serif;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 0;
+      height: 4px;
+      background-color: $main-color;
+      box-shadow: 0 0 2px 0 $main-color;
+      transition: 0.3s;
+    }
+    &:hover::before {
+      width: 100%;
+    }
+  }
+}
+.main-header {
+  background-color: rgba(245, 249, 250, 0.6);
+  backdrop-filter: blur(15px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  @media screen and (max-width: 768px) {
+    position: sticky;
+  }
+  img,
+  p {
+    cursor: pointer;
+  }
+  p {
+    font-family: "Technor", sans-serif;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 0;
+      height: 4px;
+      background-color: $main-color;
+      box-shadow: 0 0 2px 0 $main-color;
+      transition: 0.3s;
+    }
+    &:hover::before {
+      width: 100%;
+    }
+  }
+}

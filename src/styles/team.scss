@@ -1,0 +1,50 @@
+//start global varibales
+$light: #f5f9fa;
+$dark: #1e1e1e;
+$main-color: #0f75bd;
+$secondary-color: #ffcc00;
+//end global varibales
+.team {
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "TEAM";
+    position: absolute;
+    top: 18%;
+    left: -2%;
+    font-family: "Technor", sans-serif;
+    font-size: 16rem;
+    color: rgba(255, 204, 0, 0.5);
+    letter-spacing: 40px;
+    font-weight: bold;
+    z-index: -1;
+    @media screen and (max-width: 768px) {
+      top: 0;
+      font-size: 9rem;
+      letter-spacing: -1px;
+    }
+  }
+  .boxs {
+    .box {
+      background-color: $secondary-color;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 2px solid $dark;
+      box-shadow: 7px 10px 0 4px $main-color;
+      transition: 0.3s;
+      &:hover {
+        box-shadow: 0 0 0 0 $main-color;
+      }
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+      button {
+        background-color: $light;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        box-shadow: 3px 4px 0 4px $dark;
+      }
+    }
+  }
+}

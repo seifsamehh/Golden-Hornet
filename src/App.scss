@@ -1,0 +1,118 @@
+//start global varibales
+$light: #f5f9fa;
+$dark: #1e1e1e;
+$main-color: #0f74bd;
+$secondary-color: #ffcc00;
+//end global varibales
+//start global components
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Supreme", sans-serif;
+  overflow-x: hidden;
+  color: $dark;
+}
+a,
+img,
+video,
+button,
+h1,
+h2 {
+  user-select: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+  outline: none;
+}
+h1,
+h2,
+label {
+  font-family: "Technor", sans-serif;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+::selection {
+  background-color: $secondary-color;
+  color: $light;
+}
+// loader
+.loader {
+  background-image: url("./assets/patternpad.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(2px);
+    z-index: -1;
+  }
+  .countdown {
+    color: $main-color;
+  }
+}
+// dark
+.dark {
+  header {
+    background-color: rgba(15, 117, 189, 0.6);
+    p {
+      &::before {
+        background-color: $secondary-color;
+        box-shadow: 0 0 2px 0 $secondary-color;
+      }
+    }
+  }
+  .services,
+  .team {
+    .boxs {
+      .box {
+        border-color: $light;
+      }
+    }
+  }
+  .appointment {
+    .right {
+      form {
+        input,
+        textarea {
+          background-color: $dark;
+          color: $light;
+        }
+      }
+    }
+  }
+  .support {
+    background-color: $dark;
+    opacity: 0.8;
+    background-image: linear-gradient($secondary-color 1px, transparent 1px),
+      linear-gradient(to right, $secondary-color 1px, $dark 1px);
+    background-size: 20px 20px;
+    &::after {
+      background-color: rgba(30, 30, 30, 0.7);
+    }
+  }
+  .web-hero,
+  .design-hero,
+  .ai-hero,
+  .marketing-hero {
+    &::before {
+      background-color: rgba(30, 30, 30, 0.6);
+    }
+  }
+}
+// end global components

@@ -1,0 +1,39 @@
+.marketing-hero {
+  background-image: url("../assets/patternpad.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 249, 250, 0.6);
+    backdrop-filter: blur(2px);
+    z-index: -1;
+  }
+}
+.marketing-services {
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "MARKETING SERVICES";
+    position: absolute;
+    bottom: -5%;
+    left: 0%;
+    font-family: "Technor", sans-serif;
+    font-size: 5rem;
+    color: rgba(255, 204, 0, 0.5);
+    letter-spacing: 30px;
+    font-weight: bold;
+    z-index: -1;
+    @media screen and (max-width: 768px) {
+      bottom: 0%;
+      font-size: 3rem;
+      letter-spacing: -1px;
+    }
+  }
+}

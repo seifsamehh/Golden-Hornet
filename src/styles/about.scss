@@ -1,0 +1,41 @@
+//start global varibales
+$light: #f5f9fa;
+$main-color: #0f75bd;
+$secondary-color: #ffcc00;
+//end global varibales
+.about-us {
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "ABOUT US";
+    position: absolute;
+    bottom: -18%;
+    left: -2%;
+    font-family: "Technor", sans-serif;
+    font-size: 16rem;
+    color: rgba(255, 204, 0, 0.5);
+    letter-spacing: 40px;
+    font-weight: bold;
+    z-index: -1;
+    @media screen and (max-width: 768px) {
+      top: 0;
+      font-size: 4rem;
+      letter-spacing: -1px;
+    }
+  }
+  .left {
+    button {
+      background-color: $main-color;
+      color: $light;
+      font-weight: bold;
+      border: 3px solid $secondary-color;
+      border-radius: 10px;
+      padding: 0.5rem 1rem;
+    }
+  }
+  .right {
+    img {
+      cursor: grab;
+    }
+  }
+}

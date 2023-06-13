@@ -1,0 +1,59 @@
+//start global varibales
+$light: #f5f9fa;
+$secondary-color: #ffcc00;
+//end global varibales
+.appointment {
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "MEETING";
+    position: absolute;
+    bottom: -14%;
+    left: -2%;
+    font-family: "Technor", sans-serif;
+    font-size: 15rem;
+    color: rgba(255, 204, 0, 0.5);
+    letter-spacing: 80px;
+    font-weight: bold;
+    z-index: -1;
+    @media screen and (max-width: 768px) {
+      bottom: -3%;
+      font-size: 5rem;
+      letter-spacing: -1px;
+    }
+  }
+  .left {
+    .desktop-robot {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    img {
+      transform: scaleX(-1);
+    }
+  }
+  .right {
+    form {
+      input {
+        width: 50%;
+        background-color: $light;
+        border: 2px solid $secondary-color;
+        padding: 0.5rem 0 0.5rem 0.5rem;
+        outline: none;
+      }
+      textarea {
+        width: 70%;
+        background-color: $light;
+        border: 2px solid $secondary-color;
+        outline: none;
+        padding: 0.5rem;
+      }
+      input,
+      textarea {
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
