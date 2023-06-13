@@ -2,6 +2,11 @@
 $main-color: #0f75bd;
 $light: #f5f9fa;
 //end global varibales
+header {
+  p {
+    user-select: none;
+  }
+}
 .services-header {
   background-color: rgba(15, 117, 189, 0.6);
   color: #fff;

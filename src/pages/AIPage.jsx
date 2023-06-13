@@ -67,9 +67,7 @@ const AIPage = () => {
           <ServicesHeader />
           <section className="flex items-center justify-center min-h-screen overflow-hidden ai-hero">
             <Parallax scale={[0, 1.5, 0, 1.5]}>
-              <h1 className="min-[290px]:text-4xl md:text-9xl dark:text-white">
-                AI
-              </h1>
+              <h1 className="text-center text-9xl dark:text-white">AI</h1>
             </Parallax>
           </section>
           <section className="overflow-hidden ai-services">
@@ -134,7 +132,7 @@ const AIPage = () => {
                     We can integrate AI in all our softwares to make it more
                     powerful for you.
                   </p>
-                  <p className="md:text-left min-[290px]:text-center md:mt-40 dark:text-white">
+                  <p className="md:text-left min-[290px]:text-center md:mt-40 dark:text-white min-[290px]:my-4">
                     <strong>
                       NOTE ALL THE SERVICES PRICES DEPEND ON THE REQUIREMENTS OF
                       YOU SO I RECOMMEND SCHEDULING A MEETING WITH US &#x1F609;.

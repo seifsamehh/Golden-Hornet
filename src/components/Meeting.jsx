@@ -118,8 +118,10 @@ const Meeting = () => {
       id="appointment"
     >
       <div className="left">
-        <h1 className="text-4xl dark:text-white">Schedule a meeting</h1>
-        <p className="text-xl dark:text-white">
+        <h1 className="text-4xl dark:text-white min-[290px]:text-center md:text-left">
+          Schedule a meeting
+        </h1>
+        <p className="text-xl dark:text-white min-[290px]:text-center md:text-left">
           You can schedule a meeting with us to make your dreams come true and
           grow your business with modern, powerful, and creative software
           applications.

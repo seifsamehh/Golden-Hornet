@@ -64,75 +64,75 @@ const Web = () => {
           transition={{ duration: 2 }}
         >
           <ServicesHeader />
-          <section className="web-hero min-h-screen flex justify-center items-center overflow-hidden">
+          <section className="flex items-center justify-center min-h-screen overflow-hidden web-hero">
             <Parallax scale={[0, 1.5, 0, 1.5]}>
-              <h1 className="min-[290px]:text-4xl md:text-9xl dark:text-white">
+              <h1 className="min-[290px]:text-7xl md:text-9xl dark:text-white text-center">
                 Web Development
               </h1>
             </Parallax>
           </section>
-          <section className="web-services overflow-hidden">
-            <div className="container px-5 py-24 mx-auto flex flex-wrap">
+          <section className="overflow-hidden web-services">
+            <div className="container flex flex-wrap px-5 py-24 mx-auto">
               <div className="flex min-[290px]:flex-wrap-reverse md:flex-nowrap justify-around w-full">
                 <div className="lg:w-2/5 md:w-fullmd:pr-10 md:py-6">
-                  <div className="flex relative pb-12">
-                    <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div className="relative flex pb-12">
+                    <div className="absolute inset-0 flex items-center justify-center w-10 h-full">
                       <div className="h-full w-1 bg-[#0f74bd] pointer-events-none"></div>
                     </div>
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#ffcc00] inline-flex items-center justify-center text-white relative z-10">
                       <p>1</p>
                     </div>
                     <div className="flex items-center flex-grow pl-4">
-                      <h2 className="font-medium title-font text-sm text-gray-900 dark:text-white mb-1 tracking-wider">
+                      <h2 className="mb-1 text-sm font-medium tracking-wider text-gray-900 title-font dark:text-white">
                         Fully responsive website
                       </h2>
                     </div>
                   </div>
-                  <div className="flex relative pb-12">
-                    <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div className="relative flex pb-12">
+                    <div className="absolute inset-0 flex items-center justify-center w-10 h-full">
                       <div className="h-full w-1 bg-[#0f74bd] pointer-events-none"></div>
                     </div>
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#ffcc00] inline-flex items-center justify-center text-white relative z-10">
                       <p>2</p>
                     </div>
                     <div className="flex items-center flex-grow pl-4">
-                      <h2 className="font-medium title-font text-sm text-gray-900 dark:text-white mb-1 tracking-wider">
+                      <h2 className="mb-1 text-sm font-medium tracking-wider text-gray-900 title-font dark:text-white">
                         Landing page
                       </h2>
                     </div>
                   </div>
-                  <div className="flex relative pb-12">
-                    <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div className="relative flex pb-12">
+                    <div className="absolute inset-0 flex items-center justify-center w-10 h-full">
                       <div className="h-full w-1 bg-[#0f74bd] pointer-events-none"></div>
                     </div>
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#ffcc00] inline-flex items-center justify-center text-white relative z-10">
                       <p>3</p>
                     </div>
                     <div className="flex items-center flex-grow pl-4">
-                      <h2 className="font-medium title-font text-sm text-gray-900 dark:text-white mb-1 tracking-wider">
+                      <h2 className="mb-1 text-sm font-medium tracking-wider text-gray-900 title-font dark:text-white">
                         SEO package
                       </h2>
                     </div>
                   </div>
-                  <div className="flex relative pb-12">
-                    <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div className="relative flex pb-12">
+                    <div className="absolute inset-0 flex items-center justify-center w-10 h-full">
                       <div className="h-full w-1 bg-[#0f74bd] pointer-events-none"></div>
                     </div>
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#ffcc00] inline-flex items-center justify-center text-white relative z-10">
                       <p>4</p>
                     </div>
                     <div className="flex items-center flex-grow pl-4">
-                      <h2 className="font-medium title-font text-sm text-gray-900 dark:text-white mb-1 tracking-wider">
+                      <h2 className="mb-1 text-sm font-medium tracking-wider text-gray-900 title-font dark:text-white">
                         E-commerce website
                       </h2>
                     </div>
                   </div>
-                  <div className="flex relative">
+                  <div className="relative flex">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#ffcc00] inline-flex items-center justify-center text-white relative z-10">
                       <p>5</p>
                     </div>
                     <div className="flex items-center flex-grow pl-4">
-                      <h2 className="font-medium title-font text-sm text-gray-900 dark:text-white mb-1 tracking-wider">
+                      <h2 className="mb-1 text-sm font-medium tracking-wider text-gray-900 title-font dark:text-white">
                         Cross platform
                       </h2>
                     </div>
@@ -146,7 +146,7 @@ const Web = () => {
                     We provide modern, creative and fully functional websites
                     that you can rely on to grow your company.
                   </p>
-                  <p className="md:text-left min-[290px]:text-center md:mt-40 dark:text-white">
+                  <p className="md:text-left min-[290px]:text-center md:mt-40 dark:text-white min-[290px]:my-4">
                     <strong>
                       NOTE ALL THE SERVICES PRICES DEPEND ON THE REQUIREMENTS OF
                       YOU SO I RECOMMEND SCHEDULING A MEETING WITH US &#x1F609;.

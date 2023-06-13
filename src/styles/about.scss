@@ -19,6 +19,7 @@ $secondary-color: #ffcc00;
     z-index: -1;
     @media screen and (max-width: 768px) {
       top: 0;
+      left: 3%;
       font-size: 4rem;
       letter-spacing: -1px;
     }
