@@ -51,7 +51,9 @@ const sendEmail = async ({
   date,
 }) => {
   try {
+    console.log("Local date:", date);
     const utcDate = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
+    console.log("UTC date:", utcDate);
     const { data } = await axios.post(
       "https://golden-hornet.onrender.com/api/appointment",
       {
