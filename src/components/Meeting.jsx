@@ -51,6 +51,7 @@ const sendEmail = async ({
   date,
 }) => {
   try {
+    const utcDate = new Date(date.getTime() - date.getTimezoneOffset() * 60000);
     const { data } = await axios.post(
       "https://golden-hornet.onrender.com/api/appointment",
       {
@@ -60,7 +61,7 @@ const sendEmail = async ({
         businessPhone,
         email,
         message,
-        date,
+        date: utcDate.toISOString(),
       }
     );
     return data;
