@@ -7,6 +7,8 @@ import "react-toastify/dist/ReactToastify.css";
 import robot from "../assets/robot.webp";
 import "../styles/meeting.scss";
 import { Parallax } from "react-scroll-parallax";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 
 const validationSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -36,6 +38,7 @@ const validationSchema = Yup.object().shape({
       "Invalid email format"
     ),
   message: Yup.string(),
+  date: Yup.date().required("Please choose a date"),
 });
 
 const sendEmail = async ({
@@ -45,6 +48,7 @@ const sendEmail = async ({
   businessPhone,
   email,
   message,
+  date,
 }) => {
   try {
     const { data } = await axios.post(
@@ -56,6 +60,7 @@ const sendEmail = async ({
         businessPhone,
         email,
         message,
+        date,
       }
     );
     return data;
@@ -65,23 +70,29 @@ const sendEmail = async ({
 };
 
 const Meeting = () => {
-  const { getFieldProps, errors, touched, handleSubmit, resetForm } = useFormik(
-    {
-      initialValues: {
-        firstName: "",
-        lastName: "",
-        companyName: "",
-        businessPhone: "",
-        email: "",
-        message: "",
-      },
-      validationSchema,
-      async onSubmit(values) {
-        await mutate(values);
-        resetForm();
-      },
-    }
-  );
+  const {
+    getFieldProps,
+    errors,
+    touched,
+    handleSubmit,
+    resetForm,
+    setFieldValue,
+  } = useFormik({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      companyName: "",
+      businessPhone: "",
+      email: "",
+      message: "",
+      date: new Date(),
+    },
+    validationSchema,
+    async onSubmit(values) {
+      await mutate(values);
+      resetForm();
+    },
+  });
 
   const { mutate, isLoading } = useMutation(sendEmail, {
     onSuccess: () => {
@@ -145,77 +156,99 @@ const Meeting = () => {
           onSubmit={handleSubmit}
           className="flex flex-col items-start justify-start gap-2"
         >
-          <label htmlFor="firstName" className="dark:text-white">
-            First Name: *
-          </label>
-          <input
-            type="text"
-            id="firstName"
-            {...getFieldProps("firstName")}
-            autoComplete="none"
-          />
-          {errors.firstName && touched.firstName && (
-            <div className="text-red-600 dark:text-white">
-              {errors.firstName}
+          <div className="md:flex md:justify-start min-[290px]:block w-full gap-8 name">
+            <div className="flex flex-col first-name">
+              <label htmlFor="firstName" className="dark:text-white">
+                First Name: *
+              </label>
+              <input
+                type="text"
+                id="firstName"
+                {...getFieldProps("firstName")}
+                autoComplete="none"
+              />
+              {errors.firstName && touched.firstName && (
+                <div className="text-red-600 dark:text-white">
+                  {errors.firstName}
+                </div>
+              )}
             </div>
-          )}
-
-          <label htmlFor="lastName" className="dark:text-white">
-            Last Name: *
-          </label>
-          <input
-            type="text"
-            id="lastName"
-            {...getFieldProps("lastName")}
-            autoComplete="none"
-          />
-          {errors.lastName && touched.lastName && (
-            <div className="text-red-600 dark:text-white">
-              {errors.lastName}
+            <div className="flex flex-col last-name">
+              <label htmlFor="lastName" className="dark:text-white">
+                Last Name: *
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                {...getFieldProps("lastName")}
+                autoComplete="none"
+              />
+              {errors.lastName && touched.lastName && (
+                <div className="text-red-600 dark:text-white">
+                  {errors.lastName}
+                </div>
+              )}
             </div>
-          )}
-
-          <label htmlFor="companyName" className="dark:text-white">
-            Company Name: *
-          </label>
-          <input
-            type="text"
-            id="companyName"
-            {...getFieldProps("companyName")}
-            autoComplete="none"
-          />
-          {errors.companyName && touched.companyName && (
-            <div className="text-red-600 dark:text-white">
-              {errors.companyName}
+          </div>
+          <div className="md:flex md:justify-start min-[290px]:block w-full gap-8 company-details">
+            <div className="flex flex-col company-name">
+              <label htmlFor="companyName" className="dark:text-white">
+                Company Name: *
+              </label>
+              <input
+                type="text"
+                id="companyName"
+                {...getFieldProps("companyName")}
+                autoComplete="none"
+              />
+              {errors.companyName && touched.companyName && (
+                <div className="text-red-600 dark:text-white">
+                  {errors.companyName}
+                </div>
+              )}
             </div>
-          )}
-
-          <label htmlFor="businessPhone" className="dark:text-white">
-            Business Phone: *
-          </label>
-          <input
-            type="tel"
-            id="businessPhone"
-            {...getFieldProps("businessPhone")}
-            autoComplete="none"
-          />
-          {errors.businessPhone && touched.businessPhone && (
-            <div className="text-red-600 dark:text-white">
-              {errors.businessPhone}
+            <div className="flex flex-col business-phone">
+              <label htmlFor="businessPhone" className="dark:text-white">
+                Business Phone: *
+              </label>
+              <input
+                type="tel"
+                id="businessPhone"
+                {...getFieldProps("businessPhone")}
+                autoComplete="none"
+              />
+              {errors.businessPhone && touched.businessPhone && (
+                <div className="text-red-600 dark:text-white">
+                  {errors.businessPhone}
+                </div>
+              )}
             </div>
-          )}
-
+          </div>
           <label htmlFor="email" className="dark:text-white">
             Email: *
           </label>
           <input
             type="email"
             id="email"
+            className="email"
             {...getFieldProps("email")}
             autoComplete="none"
           />
           {errors.email && touched.email && (
             <div className="text-red-600 dark:text-white">{errors.email}</div>
+          )}
+          <label htmlFor="date" className="dark:text-white">
+            Date: *
+          </label>
+          <Calendar
+            id="date"
+            onChange={(date) => setFieldValue("date", date)}
+            value={getFieldProps("date").value}
+            minDate={new Date()}
+            dateFormat="dd/MM/yyyy"
+          />
+          {errors.date && touched.date && (
+            <div className="text-red-600 dark:text-white">{errors.date}</div>
           )}
 
           <label htmlFor="message" className="dark:text-white">

@@ -35,7 +35,7 @@ $secondary-color: #ffcc00;
   .right {
     form {
       input {
-        width: 50%;
+        width: 100%;
         background-color: $light;
         border: 2px solid $secondary-color;
         padding: 0.5rem 0 0.5rem 0.5rem;
@@ -49,10 +49,19 @@ $secondary-color: #ffcc00;
         padding: 0.5rem;
       }
       input,
-      textarea {
+      textarea,
+      .email {
         @media screen and (max-width: 768px) {
           width: 100%;
         }
+      }
+    }
+    .email {
+      width: 54%;
+    }
+    .react-calender {
+      @media screen and (max-width: 768px) {
+        width: 100%;
       }
     }
   }

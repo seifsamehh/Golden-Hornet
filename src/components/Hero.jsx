@@ -17,7 +17,7 @@ const Hero = () => {
             </h1>
           </Parallax>
           <h3 className="min-[290px]:text-4xl md:text-6xl text-[#0f75bd] text-center">
-            Let us grow your business
+            Golden will make you shine
           </h3>
           <Parallax
             translateX={["1100px", "-200px"]}
@@ -49,7 +49,7 @@ const Hero = () => {
           </h1>
         </Parallax>
         <h3 className="min-[290px]:text-4xl md:text-6xl text-[#0f75bd] text-center">
-          Let us grow your business
+          Golden will make you shine
         </h3>
         <Parallax
           translateX={["1100px", "-200px"]}
