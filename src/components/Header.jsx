@@ -107,10 +107,12 @@ const Header = () => {
         <MobileNav />
       </div>
       <div className="right">
-        <label className="swap swap-rotate">
+        <label className="swap swap-rotate" htmlFor="theme">
           {/* this hidden checkbox controls the state */}
           <input
             type="checkbox"
+            id="theme"
+            aria-label="theme mode"
             onClick={handleTheme}
             onChange={handleChangeCheckbox}
             checked={theme === "dark"}

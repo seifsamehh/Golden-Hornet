@@ -24,7 +24,7 @@ const Services = () => {
               and maintaining websites, with a focus on creating engaging user
               experiences and functionality.
             </p>
-            <Link to="/web-development">
+            <Link to="/web-development" aria-label="web">
               <button>For More</button>
             </Link>
           </div>
@@ -39,7 +39,7 @@ const Services = () => {
               managers, and stakeholders to understand user needs and design
               solutions that meet those needs.
             </p>
-            <Link to="/design">
+            <Link to="/design" aria-label="design">
               <button>For More</button>
             </Link>
           </div>
@@ -54,7 +54,7 @@ const Services = () => {
               experiences, instant customer support, optimized websites for
               voice search, and predictive analytics, among other benefits.
             </p>
-            <Link to="/ai">
+            <Link to="/ai" aria-label="ai">
               <button>For More</button>
             </Link>
           </div>
@@ -71,7 +71,7 @@ const Services = () => {
               individuals and businesses to create and share content, build
               relationships, and engage with their audiences.
             </p>
-            <Link to="/digital-marketing">
+            <Link to="/digital-marketing" aria-label="digital marketing">
               <button>For More</button>
             </Link>
           </div>

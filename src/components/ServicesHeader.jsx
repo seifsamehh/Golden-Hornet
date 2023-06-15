@@ -37,19 +37,31 @@ const ServicesHeader = () => {
       </div>
       <div className="middle min-[290px]:hidden md:block">
         <nav className="flex items-center justify-center gap-5">
-          <Link to="/" className="text-2xl dark:text-white">
+          <Link to="/" className="text-2xl dark:text-white" aria-label="Home">
             HOME
           </Link>
-          <Link to="/web-development" className="text-2xl dark:text-white">
+          <Link
+            to="/web-development"
+            className="text-2xl dark:text-white"
+            aria-label="web"
+          >
             WEB
           </Link>
-          <Link to="/design" className="text-2xl dark:text-white">
+          <Link
+            to="/design"
+            className="text-2xl dark:text-white"
+            aria-label="design"
+          >
             DESIGN
           </Link>
-          <Link to="/ai" className="text-2xl dark:text-white">
+          <Link to="/ai" className="text-2xl dark:text-white" aria-label="ai">
             AI
           </Link>
-          <Link to="/digital-marketing" className="text-2xl dark:text-white">
+          <Link
+            to="/digital-marketing"
+            className="text-2xl dark:text-white"
+            aria-label="digital marketing"
+          >
             DIGITAL MARKETING
           </Link>
         </nav>
@@ -58,10 +70,12 @@ const ServicesHeader = () => {
         <ServicesMobile />
       </div>
       <div className="right">
-        <label className="swap swap-rotate">
+        <label className="swap swap-rotate" htmlFor="theme">
           {/* this hidden checkbox controls the state */}
           <input
             type="checkbox"
+            id="theme"
+            aria-label="theme mode"
             onClick={handleTheme}
             onChange={handleChangeCheckbox}
             checked={theme === "dark"}

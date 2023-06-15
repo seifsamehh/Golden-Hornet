@@ -10,19 +10,31 @@ function ServicesMobile({ open }) {
       } transition-transform duration-300 ease-in-out filter  `}
     >
       <div className="flex flex-col items-center justify-center gap-8 mt-[10rem]">
-        <Link to="/" className="text-4xl dark:text-white">
+        <Link to="/" className="text-4xl dark:text-white" aria-label="Home">
           HOME
         </Link>
-        <Link to="/web-development" className="text-4xl dark:text-white">
+        <Link
+          to="/web-development"
+          className="text-4xl dark:text-white"
+          aria-label="web"
+        >
           WEB
         </Link>
-        <Link to="/design" className="text-4xl dark:text-white">
+        <Link
+          to="/design"
+          className="text-4xl dark:text-white"
+          aria-label="design"
+        >
           DESIGN
         </Link>
-        <Link to="/ai" className="text-4xl dark:text-white">
+        <Link to="/ai" className="text-4xl dark:text-white" aria-label="ai">
           AI
         </Link>
-        <Link to="/digital-marketing" className="text-4xl dark:text-white">
+        <Link
+          to="/digital-marketing"
+          className="text-4xl dark:text-white"
+          aria-label="digital marketing"
+        >
           DIGITAL MARKETING
         </Link>
       </div>

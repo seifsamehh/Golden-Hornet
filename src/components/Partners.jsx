@@ -18,6 +18,7 @@ const Partners = () => {
           href="https://www.facebook.com/diragencies"
           target="_blank"
           rel="noreferrer"
+          aria-label="Facebook account"
         >
           <img
             src={dir}
@@ -32,6 +33,7 @@ const Partners = () => {
           href="https://www.facebook.com/pathfindereeg"
           target="_blank"
           rel="noreferrer"
+          aria-label="Facebook account"
         >
           <img
             src={pathfinder}

@@ -16,6 +16,7 @@ const Footer = () => {
             href="https://www.facebook.com/profile.php?id=100090277936175"
             target="_blank"
             rel="noreferrer"
+            aria-label="Facebook account"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -31,6 +32,7 @@ const Footer = () => {
             href="https://www.linkedin.com/company/goldenhornet"
             target="_blank"
             rel="noreferrer"
+            aria-label="LinkedIn account"
           >
             <svg
               width={24}
