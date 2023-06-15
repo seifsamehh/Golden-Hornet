@@ -3,3 +3,4 @@ export { default as Web } from "./Web";
 export { default as Design } from "./Design";
 export { default as AI } from "./AIPage";
 export { default as Marketing } from "./Marketing";
+export { default as Error } from "./Error";

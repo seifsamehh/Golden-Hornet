@@ -1,7 +1,7 @@
 import { useState, useEffect, useLayoutEffect } from "react";
 import { motion } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { AI, Design, Home, Marketing, Web } from "./pages";
+import { AI, Design, Error, Home, Marketing, Web } from "./pages";
 import logo from "./assets/icon-512x512.webp";
 import "./App.scss";
 
@@ -64,7 +64,7 @@ const App = () => {
                   <Route path="/design" element={<Design />} />
                   <Route path="/ai" element={<AI />} />
                   <Route path="/digital-marketing" element={<Marketing />} />
-                  {/* <Route path="*" element={<Error />} /> */}
+                  <Route path="*" element={<Error />} />
                 </Routes>
               </Wrapper>
             </motion.div>
