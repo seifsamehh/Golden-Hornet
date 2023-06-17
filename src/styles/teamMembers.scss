@@ -1,0 +1,17 @@
+.mohamed {
+  background-image: url("../assets/bbblurry.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and (max-width: 768px) {
+    background-position: center;
+  }
+  .right {
+    position: relative;
+    z-index: 1;
+    h1,
+    p {
+      position: relative;
+      z-index: 4;
+    }
+  }
+}

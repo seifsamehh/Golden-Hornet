@@ -15,9 +15,9 @@ const About = () => {
       className="flex min-[290px]:flex-wrap md:flex-nowrap items-center justify-center min-h-screen min-[290px]:px-4 md:px-12 overflow-hidden about-us min-[290px]:pt-6 md:pt-0 min-[290px]:gap-6 md:gap-0"
       id="about-us"
     >
-      <div className="left">
+      <div className="left min-[290px]:flex md:block min-[290px]:flex-col">
         <Parallax opacity={[0, 2]}>
-          <p className="mb-6 text-3xl leading-8 dark:text-white min-[290px]:mt-20 md:mt-0">
+          <p className="mb-6 text-3xl leading-8 dark:text-white min-[290px]:mt-20 md:mt-0 min-[290px]:text-center md:text-left">
             We are a software company that specializes in creating innovative
             and high-quality software solutions. Our team of experienced
             professionals utilizes the latest technologies and industry best

@@ -45,7 +45,10 @@ const AIPage = () => {
           content="UI/UX design, Graphic design, Graphic motion, Web development, IT consulting, Marketing services, Social media marketing, AI solutions, Artificial intelligence, Machine learning, Data analytics, User experience design, User interface design, Visual design, Motion graphics, Interactive design, Front-end development, Back-end development, Full-stack development, E-commerce development, Website design, Website development, Digital marketing, Social media management, SEO services, PPC advertising, Content marketing, Branding, Identity design, Logo design, Brand strategy, Business consulting, IT solutions, Technology consulting, web"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://golden-hornet.vercel.app/" />
+        <link
+          rel="canonical"
+          href="https://golden-hornet-software.vercel.app/"
+        />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-TileColor" content="#fff" />
@@ -67,7 +70,10 @@ const AIPage = () => {
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content="https://golden-hornet.vercel.app/" />
+        <meta
+          name="twitter:url"
+          content="https://golden-hornet-software.vercel.app/"
+        />
         <meta name="twitter:title" content="Golden Hornet | software Company" />
         <meta
           name="twitter:description"
@@ -88,7 +94,10 @@ const AIPage = () => {
           property="og:site_name"
           content="Golden Hornet | software Company"
         />
-        <meta property="og:url" content="https://golden-hornet.vercel.app/" />
+        <meta
+          property="og:url"
+          content="https://golden-hornet-software.vercel.app/"
+        />
         <meta property="og:image" content="https://i.ibb.co/XScyCbP/logo.png" />
 
         {/* <!--  apple splash screen images  --> */}

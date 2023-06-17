@@ -1,5 +1,4 @@
 import logo from "../assets/icon-512x512.webp";
-import "../styles/footer.scss";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

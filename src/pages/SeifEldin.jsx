@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import logo from "../assets/icon-512x512.webp";
-import { Footer, ServicesHeader, Meeting } from "../components";
 import { Parallax } from "react-scroll-parallax";
 import { Helmet } from "react-helmet-async";
-import "../styles/marketing.scss";
-
-const Marketing = () => {
+import seif from "../assets/seif.webp";
+import neon3 from "../assets/nnneon3.svg";
+import logo from "../assets/icon-512x512.webp";
+import { Footer, TeamHeader } from "../components";
+import "../styles/teamMembers.scss";
+const SeifEldin = () => {
   //loading
   const [loading, setLoading] = useState("false");
   useEffect(() => {
@@ -30,7 +31,7 @@ const Marketing = () => {
     <>
       <Helmet>
         <meta charset="UTF-8" />
-        <title>Digital Marketing</title>
+        <title>Seif Eldin Sameh</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta name="application-name" content="Golden Hornet" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -185,73 +186,72 @@ const Marketing = () => {
           variants={variants}
           transition={{ duration: 2 }}
         >
-          <ServicesHeader />
-          <section className="flex items-center justify-center min-h-screen overflow-hidden marketing-hero">
-            <Parallax scale={[0, 1.5, 0, 1.5]}>
-              <h1 className="min-[290px]:text-8xl md:text-9xl text-center dark:text-white">
-                Digital Marketing
-              </h1>
-            </Parallax>
-          </section>
-          <section className="overflow-hidden marketing-services">
-            <div className="container flex flex-wrap px-5 py-24 mx-auto">
-              <div className="flex min-[290px]:flex-wrap-reverse md:flex-nowrap justify-around w-full">
-                <div className="lg:w-2/5 md:w-fullmd:pr-10 md:py-6">
-                  <div className="relative flex pb-12">
-                    <div className="absolute inset-0 flex items-center justify-center w-10 h-full">
-                      <div className="h-full w-1 bg-[#0f74bd] pointer-events-none"></div>
-                    </div>
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#ffcc00] inline-flex items-center justify-center text-white relative z-10">
-                      <p>1</p>
-                    </div>
-                    <div className="flex items-center flex-grow pl-4">
-                      <h2 className="mb-1 text-sm font-medium tracking-wider text-gray-900 title-font dark:text-white">
-                        Marketing research
-                      </h2>
-                    </div>
-                  </div>
-                  <div className="relative flex pb-12">
-                    <div className="absolute inset-0 flex items-center justify-center w-10 h-full">
-                      <div className="h-full w-1 bg-[#0f74bd] pointer-events-none"></div>
-                    </div>
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#ffcc00] inline-flex items-center justify-center text-white relative z-10">
-                      <p>2</p>
-                    </div>
-                    <div className="flex items-center flex-grow pl-4">
-                      <h2 className="mb-1 text-sm font-medium tracking-wider text-gray-900 title-font dark:text-white">
-                        Content plan
-                      </h2>
-                    </div>
-                  </div>
-                  <div className="relative flex pb-12">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#ffcc00] inline-flex items-center justify-center text-white relative z-10">
-                      <p>3</p>
-                    </div>
-                    <div className="flex items-center flex-grow pl-4">
-                      <h2 className="mb-1 text-sm font-medium tracking-wider text-gray-900 title-font dark:text-white">
-                        Social media marketing
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-                <div className="marketing-offers">
-                  <h1 className="text-4xl mb-6 md:text-left min-[290px]:text-center dark:text-white">
-                    What we offer in digital marketing department
-                  </h1>
-                  <p className="md:text-left min-[290px]:text-center dark:text-white">
-                    We can grow your social media and enhance your marketing.
-                  </p>
-                  <p className="md:text-left min-[290px]:text-center md:mt-40 dark:text-white min-[290px]:my-4">
-                    <strong>
-                      NOTE ALL THE SERVICES PRICES DEPEND ON THE REQUIREMENTS OF
-                      YOU SO I RECOMMEND SCHEDULING A MEETING WITH US &#x1F609;.
-                    </strong>
-                  </p>
-                </div>
-              </div>
+          <TeamHeader />
+          <section className="mohamed min-h-screen flex justify-center items-center overflow-hidden min-[290px]:flex-wrap md:flex-nowrap px-4">
+            <div className="w-full left">
+              <Parallax
+                translateY={["100px", "-100px"]}
+                className="tooltip tooltip-open tooltip-info"
+                data-tip="Hi! I'm Seif Eldin Sameh"
+              >
+                <img
+                  src={seif}
+                  alt="Seif ELdin Sameh"
+                  width={200}
+                  height={200}
+                />
+              </Parallax>
+            </div>
+            <div className="relative right">
+              <Parallax translateY={["100px", "-100px"]}>
+                <h1 className="min-[290px]:text-4xl md:text-7xl min-[290px]:text-center md:text-left text-[#0f74bd]">
+                  SEIF ELDIN SAMEH
+                </h1>
+              </Parallax>
+              <p className="leading-8 dark:text-white min-[290px]:text-center md:text-left">
+                Seif Eldin Sameh is a highly accomplished technology
+                professional who currently serves as the Chief Operating Officer
+                (COO) and Head of Web Team for a company. With years of
+                experience in the technology industry, Seif has gained a
+                reputation for his expertise in web development, project
+                management, and team leadership.
+              </p>
+              <p className="my-6 leading-8 dark:text-white min-[290px]:text-center md:text-left">
+                As the COO and Head of Web Team, Seif is responsible for
+                overseeing the company&apos;s web development projects and
+                ensuring that they are completed on time, within budget, and to
+                a high standard. He works closely with other departments to
+                identify web development needs and develop strategies to meet
+                those needs.
+              </p>
+              <p className="leading-8 dark:text-white min-[290px]:text-center md:text-left">
+                One of Seif&apos;s key strengths is his ability to manage
+                complex projects and teams. He is an expert in project
+                management methodologies and is skilled at managing teams of
+                developers, designers, and other professionals to achieve
+                project goals. His leadership has been instrumental in driving
+                the success of the company&apos;s web development projects.
+              </p>
+              <Parallax rotate={[0, 45]}>
+                <img
+                  src={neon3}
+                  alt="neon"
+                  width={400}
+                  height={400}
+                  className="absolute min-[290px]:hidden md:block"
+                />
+              </Parallax>
+              <Parallax rotate={[0, 360]}>
+                <img
+                  src={neon3}
+                  alt="neon"
+                  width={400}
+                  height={400}
+                  className="absolute min-[290px]:block md:hidden"
+                />
+              </Parallax>
             </div>
           </section>
-          <Meeting />
           <Footer />
         </motion.div>
       )}
@@ -259,4 +259,4 @@ const Marketing = () => {
   );
 };
 
-export default Marketing;
+export default SeifEldin;

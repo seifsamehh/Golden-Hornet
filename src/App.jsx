@@ -1,7 +1,19 @@
 import { useState, useEffect, useLayoutEffect } from "react";
 import { motion } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { AI, Design, Error, Home, Marketing, Web } from "./pages";
+import {
+  AI,
+  Design,
+  Error,
+  EyadAyman,
+  Home,
+  KirolosAdel,
+  Marketing,
+  MohamedReda,
+  SeifEldin,
+  Web,
+  Yassmin,
+} from "./pages";
 import logo from "./assets/icon-512x512.webp";
 import "./App.scss";
 
@@ -64,6 +76,11 @@ const App = () => {
                   <Route path="/design" element={<Design />} />
                   <Route path="/ai" element={<AI />} />
                   <Route path="/digital-marketing" element={<Marketing />} />
+                  <Route path="/mohamed-reda" element={<MohamedReda />} />
+                  <Route path="/eyad-ayman" element={<EyadAyman />} />
+                  <Route path="/seif-eldin-sameh" element={<SeifEldin />} />
+                  <Route path="/kirolos-adel" element={<KirolosAdel />} />
+                  <Route path="/yassmin" element={<Yassmin />} />
                   <Route path="*" element={<Error />} />
                 </Routes>
               </Wrapper>

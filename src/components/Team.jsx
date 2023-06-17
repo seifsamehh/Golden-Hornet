@@ -5,6 +5,7 @@ import kero from "../assets/kero.webp";
 import yassmin from "../assets/yassmin.webp";
 import "../styles/team.scss";
 import { Parallax } from "react-scroll-parallax";
+import { Link } from "react-router-dom";
 
 const Team = () => {
   return (
@@ -100,7 +101,8 @@ const Team = () => {
             </div>
             <div className="content">
               <h2>MOHAMED REDA</h2>
-              <h3>CEO , CFO</h3>
+              <h3 className="mb-2">CEO , CFO</h3>
+              <Link to="/mohamed-reda">For More</Link>
             </div>
           </div>
           <div className="box">
@@ -115,7 +117,8 @@ const Team = () => {
             </div>
             <div className="content">
               <h2>EYAD AYMAN</h2>
-              <h3>CTO, HEAD OF AI TEAM</h3>
+              <h3 className="mb-2">CTO, HEAD OF AI TEAM</h3>
+              <Link to="/eyad-ayman">For More</Link>
             </div>
           </div>
           <div className="box">
@@ -130,7 +133,8 @@ const Team = () => {
             </div>
             <div className="content">
               <h2>SEIF ELDIN SAMEH</h2>
-              <h3>COO, HEAD OF WEB TEAM</h3>
+              <h3 className="mb-2">COO, HEAD OF WEB TEAM</h3>
+              <Link to="/seif-eldin-sameh">For More</Link>
             </div>
           </div>
           <div className="box">
@@ -145,7 +149,8 @@ const Team = () => {
             </div>
             <div className="content">
               <h2>KIROLOS ADEL</h2>
-              <h3>CCO, HEAD OF DESIGN TEAM</h3>
+              <h3 className="mb-2">CCO, HEAD OF DESIGN TEAM</h3>
+              <Link to="/kirolos-adel">For More</Link>
             </div>
           </div>
           <div className="box">
@@ -160,7 +165,8 @@ const Team = () => {
             </div>
             <div className="content">
               <h2>YASSMIN</h2>
-              <h3>HEAD OF MARKETING TEAM</h3>
+              <h3 className="mb-2">HEAD OF MARKETING TEAM</h3>
+              <Link to="/yassmin">For More</Link>
             </div>
           </div>
         </div>

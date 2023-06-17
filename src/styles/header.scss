@@ -1,10 +1,39 @@
 //start global varibales
 $main-color: #0f75bd;
+$secondary-color: #ffcc00;
 $light: #f5f9fa;
 //end global varibales
 header {
   p {
     user-select: none;
+  }
+}
+.team-header {
+  background-color: rgba(15, 117, 189, 0.6);
+  color: #fff;
+  backdrop-filter: blur(15px);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  a:not(.special) {
+    text-align: center;
+    font-family: "Technor", sans-serif;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 0;
+      height: 4px;
+      background-color: $secondary-color;
+      box-shadow: 0 0 2px 0 $secondary-color;
+      transition: 0.3s;
+    }
+    &:hover::before {
+      width: 100%;
+    }
   }
 }
 .services-header {
@@ -29,8 +58,8 @@ header {
       left: 0;
       width: 0;
       height: 4px;
-      background-color: $main-color;
-      box-shadow: 0 0 2px 0 $main-color;
+      background-color: $secondary-color;
+      box-shadow: 0 0 2px 0 $secondary-color;
       transition: 0.3s;
     }
     &:hover::before {
