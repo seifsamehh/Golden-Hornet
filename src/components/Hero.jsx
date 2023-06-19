@@ -1,7 +1,22 @@
+import { useHeroData } from "../hooks/useHeroData";
 import { Parallax } from "react-scroll-parallax";
-import robot from "../assets/robot.webp";
+import logo from "../assets/icon-512x512.webp";
 import "../styles/hero.scss";
 const Hero = () => {
+  const { status, data, error } = useHeroData();
+
+  if (status === "loading") {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen gap-12 data-loading">
+        <img src={logo} alt="logo" width={150} height={150} />
+        <h1 className="text-4xl dark:text-white">Please wait....</h1>
+      </div>
+    );
+  }
+
+  if (status === "error") {
+    return <div>Error: {error.message}</div>;
+  }
   return (
     <>
       {/* desktop */}
@@ -12,12 +27,12 @@ const Hero = () => {
         >
           <Parallax scale={[0, 1.5, 0, 1.5]}>
             <h1 className="min-[290px]:text-6xl md:text-8xl dark:text-white text-center">
-              Welcome, To{" "}
-              <span className="text-[#ffcc00] font-bold">Golden Hornet</span>
+              {data.title} {""}
+              <span className="text-[#ffcc00]">Golden Hornet</span>
             </h1>
           </Parallax>
           <h3 className="min-[290px]:text-4xl md:text-6xl text-[#0f75bd] text-center">
-            Golden will make you shine
+            {data.subtitle}
           </h3>
           <Parallax
             translateX={["1100px", "-200px"]}
@@ -25,7 +40,7 @@ const Hero = () => {
             className="tooltip tooltip-open tooltip-info desktop min-[290px]:hidden md:block"
             data-tip="Hi !"
           >
-            <img src={robot} alt="robot" width={100} height={100} />
+            <img src={data.image} alt="robot" width={100} height={100} />
           </Parallax>
           <Parallax
             translateX={["300px", "-200px"]}
@@ -33,7 +48,7 @@ const Hero = () => {
             className="tooltip tooltip-open tooltip-info mobile min-[290px]:block md:hidden"
             data-tip="Hi !"
           >
-            <img src={robot} alt="robot" width={100} height={100} />
+            <img src={data.image} alt="robot" width={100} height={100} />
           </Parallax>
         </section>
       </Parallax>
@@ -44,12 +59,12 @@ const Hero = () => {
       >
         <Parallax scale={[0, 2, 0, 2]}>
           <h1 className="min-[290px]:text-6xl md:text-8xl dark:text-white text-center">
-            Welcome, To{" "}
-            <span className="text-[#ffcc00] font-bold">Golden Hornet</span>
+            {data.title} {""}
+            <span className="text-[#ffcc00]">Golden Hornet</span>
           </h1>
         </Parallax>
         <h3 className="min-[290px]:text-4xl md:text-6xl text-[#0f75bd] text-center">
-          Golden will make you shine
+          {data.subtitle}
         </h3>
         <Parallax
           translateX={["1100px", "-200px"]}
@@ -57,7 +72,7 @@ const Hero = () => {
           className="tooltip tooltip-open tooltip-info desktop min-[290px]:hidden md:block"
           data-tip="Hi !"
         >
-          <img src={robot} alt="robot" width={100} height={100} />
+          <img src={data.image} alt="robot" width={100} height={100} />
         </Parallax>
         <Parallax
           translateX={["300px", "-200px"]}
@@ -65,7 +80,7 @@ const Hero = () => {
           className="tooltip tooltip-open tooltip-info mobile min-[290px]:block md:hidden"
           data-tip="Hi !"
         >
-          <img src={robot} alt="robot" width={100} height={100} />
+          <img src={data.image} alt="robot" width={100} height={100} />
         </Parallax>
       </section>
     </>

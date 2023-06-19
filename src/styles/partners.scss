@@ -13,12 +13,13 @@ $secondary-color: #ffcc00;
     font-family: "Technor", sans-serif;
     font-size: 16rem;
     color: rgba(255, 204, 0, 0.5);
+    filter: drop-shadow(2px 4px 6px $secondary-color);
     letter-spacing: 40px;
     font-weight: bold;
     z-index: -1;
     @media screen and (max-width: 768px) {
-      top: -8%;
-      font-size: 5rem;
+      top: -6%;
+      font-size: 4rem;
       letter-spacing: -1px;
     }
   }

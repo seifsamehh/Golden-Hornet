@@ -1,10 +1,14 @@
+//start global varibales
+$light: #f5f9fa;
+$secondary-color: #ffcc00;
+//end global varibales
 .support {
   position: relative;
   z-index: 1;
   background-color: #f5f9fa;
   opacity: 0.8;
-  background-image: linear-gradient(#ffcc00 1px, transparent 1px),
-    linear-gradient(to right, #ffcc00 1px, #f5f9fa 1px);
+  background-image: linear-gradient($secondary-color 1px, transparent 1px),
+    linear-gradient(to right, $secondary-color 1px, $light 1px);
   background-size: 20px 20px;
   &::before {
     content: "SUPPORT";
@@ -14,6 +18,7 @@
     font-family: "Technor", sans-serif;
     font-size: 16rem;
     color: rgba(255, 204, 0, 0.5);
+    filter: drop-shadow(2px 4px 6px $secondary-color);
     letter-spacing: 40px;
     font-weight: bold;
     z-index: -1;

@@ -13,6 +13,7 @@ $secondary-color: #ffcc00;
     font-family: "Technor", sans-serif;
     font-size: 15rem;
     color: rgba(255, 204, 0, 0.5);
+    filter: drop-shadow(2px 4px 6px $secondary-color);
     letter-spacing: 80px;
     font-weight: bold;
     z-index: -1;
