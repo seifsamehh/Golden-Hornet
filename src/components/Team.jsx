@@ -1,13 +1,29 @@
 import mohamed from "../assets/mohamed.webp";
-import eyad from "../assets/eyad.webp";
-import seif from "../assets/seif.webp";
-import kero from "../assets/kero.webp";
-import yassmin from "../assets/yassmin.webp";
-import "../styles/team.scss";
+// import eyad from "../assets/eyad.webp";
+// import seif from "../assets/seif.webp";
+// import kero from "../assets/kero.webp";
+// import yassmin from "../assets/yassmin.webp";
+import { useTeamData } from "../hooks/useTeamData";
 import { Parallax } from "react-scroll-parallax";
 import { Link } from "react-router-dom";
+import logo from "../assets/icon-512x512.webp";
+import "../styles/team.scss";
 
 const Team = () => {
+  const { status, data, error } = useTeamData();
+
+  if (status === "loading") {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen gap-12 data-loading">
+        <img src={logo} alt="logo" width={150} height={150} />
+        <h1 className="text-4xl dark:text-white">Please wait....</h1>
+      </div>
+    );
+  }
+
+  if (status === "error") {
+    return <div>Error: {error.message}</div>;
+  }
   return (
     <section
       className="flex flex-col items-center justify-center min-h-screen gap-12 py-6 overflow-hidden team"
@@ -89,86 +105,26 @@ const Team = () => {
       </div>
       <div className="down">
         <div className="flex items-center justify-center gap-4 px-4 boxs min-[290px]:flex-wrap md:flex-nowrap">
-          <div className="box">
-            <div className="image">
-              <img
-                src={mohamed}
-                alt="mohamed reda"
-                width={100}
-                height={100}
-                loading="lazy"
-              />
-            </div>
-            <div className="content">
-              <h2>MOHAMED REDA</h2>
-              <h3 className="mb-2">CEO , CFO</h3>
-              <Link to="/mohamed-reda">For More</Link>
-            </div>
-          </div>
-          <div className="box">
-            <div className="image">
-              <img
-                src={eyad}
-                alt="Eyad Ayman"
-                width={100}
-                height={100}
-                loading="lazy"
-              />
-            </div>
-            <div className="content">
-              <h2>EYAD AYMAN</h2>
-              <h3 className="mb-2">CTO, HEAD OF AI TEAM</h3>
-              <Link to="/eyad-ayman">For More</Link>
-            </div>
-          </div>
-          <div className="box">
-            <div className="image">
-              <img
-                src={seif}
-                alt="Seif Eldin Sameh"
-                width={100}
-                height={100}
-                loading="lazy"
-              />
-            </div>
-            <div className="content">
-              <h2>SEIF ELDIN SAMEH</h2>
-              <h3 className="mb-2">COO, HEAD OF WEB TEAM</h3>
-              <Link to="/seif-eldin-sameh">For More</Link>
-            </div>
-          </div>
-          <div className="box">
-            <div className="image">
-              <img
-                src={kero}
-                alt="Kero"
-                width={100}
-                height={100}
-                loading="lazy"
-              />
-            </div>
-            <div className="content">
-              <h2>KIROLOS ADEL</h2>
-              <h3 className="mb-2">CCO, HEAD OF DESIGN TEAM</h3>
-              <Link to="/kirolos-adel">For More</Link>
-            </div>
-          </div>
-          <div className="box">
-            <div className="image">
-              <img
-                src={yassmin}
-                alt="yassmin"
-                width={100}
-                height={100}
-                loading="lazy"
-              />
-            </div>
-            <div className="content">
-              <h2>YASSMIN</h2>
-              <h3 className="mb-2">HEAD OF MARKETING TEAM</h3>
-              <Link to="/yassmin">For More</Link>
-            </div>
-          </div>
+          {data?.map((team) => {
+            return (
+              <div className="box" key={team._id}>
+                <div className="image">
+                  <img
+                    src={team.image}
+                    alt={team.title}
+                    width={100}
+                    height={100}
+                    loading="lazy"
+                  />
+                </div>
+                <div className="content">
+                  <h2>{team.title}</h2>
+                  <h3 className="mb-2">{team.subtitle}</h3>
+                  <Link to={team.link}>For More</Link>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
