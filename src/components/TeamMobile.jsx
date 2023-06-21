@@ -46,7 +46,7 @@ function TeamMobile({ open }) {
           className="text-4xl dark:text-white"
           aria-label="yassmin"
         >
-          YASSMIN
+          YASSMIN ADEL
         </Link>
       </div>
     </div>

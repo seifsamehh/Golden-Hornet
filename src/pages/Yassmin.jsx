@@ -192,7 +192,7 @@ const Yassmin = () => {
               <Parallax
                 translateY={["100px", "-100px"]}
                 className="tooltip tooltip-open tooltip-info"
-                data-tip="Hi! I'm Yassmin"
+                data-tip="Hi! I'm Yassmin Adel"
               >
                 <img src={yassmin} alt="yassmin" width={200} height={200} />
               </Parallax>
@@ -200,7 +200,7 @@ const Yassmin = () => {
             <div className="relative right">
               <Parallax translateY={["100px", "-100px"]}>
                 <h1 className="min-[290px]:text-4xl md:text-7xl min-[290px]:text-center md:text-left text-[#0f74bd]">
-                  YASSMIN
+                  YASSMIN ADEL
                 </h1>
               </Parallax>
               <p className="leading-8 dark:text-white min-[290px]:text-center md:text-left">

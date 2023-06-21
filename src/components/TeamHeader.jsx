@@ -29,7 +29,7 @@ const TeamHeader = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
   return (
-    <header className="team-header flex items-center justify-between p-5">
+    <header className="flex items-center justify-between p-5 team-header">
       <div className="left">
         <Link to="/" className="special">
           <img src={logo} alt="logo" width={100} height={100} />
@@ -73,7 +73,7 @@ const TeamHeader = () => {
             className="text-2xl dark:text-white"
             aria-label="yassmin"
           >
-            YASSMIN
+            YASSMIN ADEL
           </Link>
         </nav>
       </div>
