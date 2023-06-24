@@ -13,6 +13,7 @@ import {
   SeifEldin,
   Web,
   Yassmin,
+  Offline,
 } from "./pages";
 import logo from "./assets/icon-512x512.webp";
 import "./App.scss";
@@ -46,6 +47,25 @@ const App = () => {
     visible: { opacity: 1 },
     hidden: { opacity: 0 },
   };
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
+
+  useEffect(() => {
+    function handleOnline() {
+      setIsOnline(true);
+    }
+
+    function handleOffline() {
+      setIsOnline(false);
+    }
+
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
+
+    return () => {
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
+    };
+  }, []);
   return (
     <>
       {loading ? (
@@ -62,30 +82,34 @@ const App = () => {
         </div>
       ) : (
         <>
-          <main className="bg-[#f5f9fa] dark:bg-[#1e1e1e] min-h-screen duration-[0.3s]">
-            <motion.div
-              initial="hidden"
-              animate={isLoaded ? "visible" : "hidden"}
-              variants={variants}
-              transition={{ duration: 2 }}
-            >
-              <Wrapper>
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/web-development" element={<Web />} />
-                  <Route path="/design" element={<Design />} />
-                  <Route path="/ai" element={<AI />} />
-                  <Route path="/digital-marketing" element={<Marketing />} />
-                  <Route path="/mohamed-reda" element={<MohamedReda />} />
-                  <Route path="/eyad-ayman" element={<EyadAyman />} />
-                  <Route path="/seif-eldin-sameh" element={<SeifEldin />} />
-                  <Route path="/kirolos-adel" element={<KirolosAdel />} />
-                  <Route path="/yassmin" element={<Yassmin />} />
-                  <Route path="*" element={<Error />} />
-                </Routes>
-              </Wrapper>
-            </motion.div>
-          </main>
+          {isOnline ? (
+            <main className="bg-[#f5f9fa] dark:bg-[#1e1e1e] min-h-screen duration-[0.3s]">
+              <motion.div
+                initial="hidden"
+                animate={isLoaded ? "visible" : "hidden"}
+                variants={variants}
+                transition={{ duration: 2 }}
+              >
+                <Wrapper>
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/web-development" element={<Web />} />
+                    <Route path="/design" element={<Design />} />
+                    <Route path="/ai" element={<AI />} />
+                    <Route path="/digital-marketing" element={<Marketing />} />
+                    <Route path="/mohamed-reda" element={<MohamedReda />} />
+                    <Route path="/eyad-ayman" element={<EyadAyman />} />
+                    <Route path="/seif-eldin-sameh" element={<SeifEldin />} />
+                    <Route path="/kirolos-adel" element={<KirolosAdel />} />
+                    <Route path="/yassmin" element={<Yassmin />} />
+                    <Route path="*" element={<Error />} />
+                  </Routes>
+                </Wrapper>
+              </motion.div>
+            </main>
+          ) : (
+            <Offline />
+          )}
         </>
       )}
     </>

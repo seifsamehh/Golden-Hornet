@@ -9,3 +9,4 @@ export { default as SeifEldin } from "./SeifEldin";
 export { default as KirolosAdel } from "./KirolosAdel";
 export { default as Yassmin } from "./Yassmin";
 export { default as Error } from "./Error";
+export { default as Offline } from "./Offline";
