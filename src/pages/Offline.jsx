@@ -4,7 +4,7 @@ const Offline = () => {
   }
   return (
     // <!-- ====== offline Section Start -->
-    <section className="bg-[#0f74bd] relative z-10 flex items-center justify-center min-h-screen">
+    <section className="bg-[#0f74bd] relative z-10 flex items-center justify-center min-h-screen overflow-hidden">
       <div className="container mx-auto">
         <div className="flex items-center justify-center -mx-4">
           <div className="w-full px-4">
