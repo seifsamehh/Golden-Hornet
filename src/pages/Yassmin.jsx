@@ -200,7 +200,7 @@ const Yassmin = () => {
             <div className="relative right">
               <Parallax translateY={["100px", "-100px"]}>
                 <h1 className="min-[290px]:text-4xl md:text-7xl min-[290px]:text-center md:text-left text-[#0f74bd]">
-                  YASSMIN ADEL
+                  YASSMIN
                 </h1>
               </Parallax>
               <p className="leading-8 dark:text-white min-[290px]:text-center md:text-left">
