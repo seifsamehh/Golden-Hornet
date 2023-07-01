@@ -20,7 +20,7 @@ const handleClickScroll3 = () => {
   }
 };
 const handleClickScroll4 = () => {
-  const element = document.getElementById("contact");
+  const element = document.getElementById("support");
   if (element) {
     element.scrollIntoView({ behavior: "smooth" });
   }
